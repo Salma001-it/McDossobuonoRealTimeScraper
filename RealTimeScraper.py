@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from datetime import datetime, date
 
 import time
 import pandas as pd
@@ -16,7 +17,6 @@ driver = webdriver.Chrome(options=options)
 ora_oggi = datetime.now()  # restituisce un oggetto datetime
 oggi = ora_oggi.strftime("%Y-%m-%d %H:%M:%S")  # es. "2025-11-17 14:35:20"
 
-print(ora_oggi_str)
 
 oggi = date.today()
 import os
