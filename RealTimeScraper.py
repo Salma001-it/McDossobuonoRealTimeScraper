@@ -46,10 +46,9 @@ try:
           writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
           if write_header:
             writer.writeheader()  # scrive l'header solo se il file non esiste o è vuoto
-          for affluenza in Tot_affluenza:
-              recensione = driver.find_element(By.CLASS_NAME, "F7nice").text.replace("\n", " ")
-              writer.writerow({'Recensioni': recensione,'Link':link,'Oggi': oggi,'RealTime':affollamento_text})
-              csvfile.flush()
+            recensione = driver.find_element(By.CLASS_NAME, "F7nice").text.replace("\n", " ")
+            writer.writerow({'Recensioni': recensione,'Link':link,'Oggi': oggi,'RealTime':affollamento_text})
+            csvfile.flush()
                   #print(estrattore, out, recensione)  # Debug
 
 except Exception as e:
