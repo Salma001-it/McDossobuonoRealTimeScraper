@@ -12,7 +12,11 @@ options.add_argument("--headless")
 options.add_argument("--no-sandbox")
 options.add_argument("--disable-dev-shm-usage")
 driver = webdriver.Chrome(options=options)
-from datetime import date
+# Data e ora attuali
+ora_oggi = datetime.now()  # restituisce un oggetto datetime
+oggi = ora_oggi.strftime("%Y-%m-%d %H:%M:%S")  # es. "2025-11-17 14:35:20"
+
+print(ora_oggi_str)
 
 oggi = date.today()
 import os
