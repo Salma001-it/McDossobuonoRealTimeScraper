@@ -16,9 +16,6 @@ driver = webdriver.Chrome(options=options)
 # Data e ora attuali
 ora_oggi = datetime.now()  # restituisce un oggetto datetime
 oggi = ora_oggi.strftime("%Y-%m-%d %H:%M:%S")  # es. "2025-11-17 14:35:20"
-
-
-oggi = date.today()
 import os
 link = "https://www.google.it/maps/place/McDonald's+Dossobuono/@45.389607,10.9007287,17z/data=!4m6!3m5!1s0x4781e089d18461af:0x1eed8b83b934aa4c!8m2!3d45.389607!4d10.9033036!16s%2Fg%2F11cs39j4gr?entry=ttu&g_ep=EgoyMDI1MDQzMC4xIKXMDSoASAFQAw%3D%3D"
 driver.get(link)
