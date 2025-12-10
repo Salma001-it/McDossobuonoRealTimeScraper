@@ -1,18 +1,16 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from datetime import datetime, date
-
-import time
-import pandas as pd
-import csv
+import time, csv, os
+from datetime import date
+# --- Configurazione Firefox headless ---
 options = Options()
-options.add_argument("--headless")
-#options.add_argument("--no-sandbox")
-#options.add_argument("--disable-dev-shm-usage")
-driver = webdriver.Chrome(options=options)
+options.add_argument("--headless")         
+options.add_argument("--width=1920")        # larghezza finestra
+options.add_argument("--height=1080")       # altezza finestra
+driver = webdriver.Firefox(options=options)
 # Data e ora attuali
 ora_oggi = datetime.now()  # restituisce un oggetto datetime
 oggi = ora_oggi.strftime("%Y-%m-%d %H:%M:%S")  # es. "2025-11-17 14:35:20"
